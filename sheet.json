@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "next sheet",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "data": {
+        "description": "表格具体数据",
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": {
+            "description": "表格数据",
+            "title": "cellData",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "content": {
+                "description": "单元格内容",
+                "title": "cellContent",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  
+                }
+              },
+              "style": {
+                "description": "单元格样式",
+                "title": "cellStyle",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "fontSize": {
+                    "type": "string",
+                    "description": "字号"
+                  },
+                  "color": {
+                    "type": "string",
+                    "description": "文字颜色"
+                  },
+                  "backgroundColor": {
+                    "type": "string",
+                    "description": "背景颜色"
+                  },
+                  "fontFamily": {
+                    "type": "string",
+                    "description": "字体"
+                  }
+                }
+              }
+            },
+            "required": [
+              "content"
+            ]
+          }
+        }
+      }
+    },
+    "required": [
+      "data"
+    ]
+}
